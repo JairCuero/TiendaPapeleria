@@ -1,22 +1,52 @@
-# FundamentosWEB
-Proyecto Final E-COMMERCE: Artículos de Papelería y Oficina
+# OFFIEXPRESS
 
-Este proyecto consiste en el desarrollo de un E-COMMERCE dedicado a la venta de artículos de papelería y oficina, diseñado para simular una tienda online que permite a los usuarios realizar compras de manera sencilla y eficiente. La aplicación se enfoca en ofrecer una experiencia de usuario intuitiva, donde el comprador puede gestionar su presupuesto y la cantidad de artículos que desea adquirir.
+E-commerce de papelería y oficina. Este proyecto nació como entrega académica de Fundamentos Web y está evolucionando hacia una tienda personal, escalable y documentada.
 
-Estructura del Proyecto:
+## Estado actual
 
-Condiciones de Compra:
-La primera vista del sitio establece claramente las condiciones de compra. Aquí, se informan a los usuarios sobre aspectos fundamentales como el presupuesto disponible y las restricciones en la cantidad de artículos que pueden adquirir.
-<img width="1893" height="883" alt="image" src="https://github.com/user-attachments/assets/c28021e6-cf11-420a-9f20-f33d7912a388" />
+La rama `modernizacion-mvp` inicia la modernización con Next.js, React y TypeScript. Incluye una portada de tienda responsiva, catálogo de productos de ejemplo, búsqueda, filtros por categoría y un carrito persistente en el navegador.
 
-Lista de Productos:
-La segunda vista presenta una lista de productos que el usuario puede explorar. Implementé un sistema de scroll infinito, lo que permite a los usuarios navegar por 40 artículos sin necesidad de cargar nuevas páginas. Este enfoque mejora la experiencia de usuario al hacer que la navegación sea más fluida y menos frustrante, incentivando a los usuarios a seguir explorando hasta encontrar lo que desean.
+El checkout, las cuentas, el inventario en base de datos y el procesamiento de pagos aún no están implementados. El carrito actual es una demostración del flujo de interfaz y no debe utilizarse para transacciones reales.
 
-<img width="1894" height="878" alt="image" src="https://github.com/user-attachments/assets/bd67c1e0-7481-4250-be63-2e91438cf268" />
+## Tecnologías
 
+- Next.js App Router
+- React y TypeScript
+- CSS con variables de diseño y estilos adaptables
+- `localStorage` para persistir el carrito de demostración
 
-Carrito de Compras:
-La tercera vista está dedicada al carrito de compras, donde los usuarios pueden ver un resumen detallado de los artículos que han agregado. Incluye funcionalidades como la posibilidad eliminar artículos. Además, se incorpora un sistema de validación de tarjeta de crédito para asegurar que la transacción se realiza de manera segura, finalizando con el proceso de pago.
+## Ejecutar en desarrollo
 
-<img width="1888" height="876" alt="image" src="https://github.com/user-attachments/assets/7d169778-c03e-447a-9b82-cc8745b4481d" />
+Requisitos: Node.js 20.9 o superior y npm.
 
+```bash
+npm install
+npm run dev
+```
+
+Abre [http://localhost:3000](http://localhost:3000).
+
+Comandos disponibles:
+
+```bash
+npm run dev
+npm run lint
+npm run build
+npm start
+```
+
+## Estructura
+
+```text
+src/
+  app/                       # rutas, layout y estilos globales
+  features/
+    catalog/                 # modelo y datos de producto
+    storefront/              # catálogo y experiencia de tienda
+```
+
+Las páginas y áreas de negocio se mantienen separadas para que catálogo, carrito y checkout puedan crecer como funcionalidades independientes. La siguiente etapa es definir el modelo persistente de productos e inventario, y después terminar el flujo de carrito y checkout de demostración.
+
+## Proyecto original
+
+Los archivos HTML, CSS y JavaScript de la entrega académica se conservan en el historial y en sus carpetas originales durante la migración gradual.
